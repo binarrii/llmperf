@@ -348,7 +348,7 @@ The correctness tests were implemented with the following workflow in mind:
 
 ```python
 import ray
-from transformers import LlamaTokenizerFast
+from transformers import Qwen2TokenizerFast
 
 from llmperf.ray_clients.openai_chat_completions_client import (
     OpenAIChatCompletionsClient,
@@ -363,8 +363,8 @@ ray.init(runtime_env={"env_vars": {"OPENAI_API_BASE" : "https://api.endpoints.an
                                    "OPENAI_API_KEY" : "YOUR_API_KEY"}})
 
 base_prompt = "hello_world"
-tokenizer = LlamaTokenizerFast.from_pretrained(
-    "hf-internal-testing/llama-tokenizer"
+tokenizer = Qwen2TokenizerFast.from_pretrained(
+    "Qwen/Qwen-tokenizer"
 )
 base_prompt_len = len(tokenizer.encode(base_prompt))
 prompt = (base_prompt, base_prompt_len)
