@@ -21,3 +21,6 @@ dependencies = ["pydantic<2.5",
                 "tqdm",
                 "boto3",
                 "google-cloud-aiplatform"]
+
+[tool.setuptools.package-data]
+"llmperf" = ["*.txt"]
