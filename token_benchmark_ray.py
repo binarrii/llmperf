@@ -61,7 +61,8 @@ def get_token_throughput_latencies(
     random.seed(11111)
 
     tokenizer = LlamaTokenizerFast.from_pretrained(
-        "hf-internal-testing/llama-tokenizer"
+        # "hf-internal-testing/llama-tokenizer"
+        "SalonbusAI/llama-tokenizer"
     )
     get_token_length = lambda text: len(tokenizer.encode(text))
     
