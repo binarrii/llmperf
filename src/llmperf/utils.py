@@ -6,7 +6,7 @@ import subprocess
 import time
 from typing import Any, Dict, Tuple
 
-from transformers import LlamaTokenizerFast
+from transformers import Qwen2TokenizerFast
 
 
 RESULTS_VERSION = "2023-08-31"
@@ -60,8 +60,8 @@ def randomly_sample_sonnet_lines_prompt(
     prompt_tokens_mean: int = 550,
     prompt_tokens_stddev: int = 250,
     expect_output_tokens: int = 150,
-    tokenizer = LlamaTokenizerFast.from_pretrained(
-        "hf-internal-testing/llama-tokenizer")
+    tokenizer = Qwen2TokenizerFast.from_pretrained(
+        "Qwen/Qwen-tokenizer")
 ) -> Tuple[str, int]:
     """Generate a prompt that randomly samples lines from a the shakespeare sonnet at sonnet.txt.
 
