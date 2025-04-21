@@ -9,7 +9,7 @@ from typing import Any, Dict, Tuple
 from transformers import Qwen2TokenizerFast
 
 
-RESULTS_VERSION = "2023-08-31"
+RESULTS_VERSION = "2025-04-21"
 
 
 class LLMPerfResults:
